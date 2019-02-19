@@ -83,7 +83,7 @@ gosql -in="account"
 
 在实际代码中引入account/gen文件夹。
 
-```code
+```main.go
 package main
 
 import (
