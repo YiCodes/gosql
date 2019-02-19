@@ -27,7 +27,7 @@ type User struct {
 }
 ```
 
-默认情况生成SQL语句，与类型名称(User)相同，可以指定不同的名字（user_info)
+默认情况生成SQL语句中的数据表名与类型名称(User)相同，可以指定不同的名字（user_info)
 
 tableName 数据表名
 
