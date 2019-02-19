@@ -11,7 +11,7 @@ go get github.com/YiCodes/gosql/sqlutil
 
 ## 使用方法
 
-在account.go定义数据模型和操作文件，定义见[SQLCodeGen](https://github.com/YiCodes/gosql/sqlcodegen)
+在account.go定义数据模型和操作文件，定义见[SQLCodeGen](https://github.com/YiCodes/gosql/tree/master/sqlcodegen)
 
 ```account.go
 package account
