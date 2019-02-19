@@ -18,7 +18,7 @@ import (
 
 在account.go中定义数据模型
 
-```user
+```account.go
 // 定义模型
 type User struct {
     UserID   string
@@ -31,7 +31,7 @@ type User struct {
 
 tableName 数据表名
 
-```table
+```account.go
 type User struct {
     sqlcodegen.TableName `tableName:"user_info"`
     UserID   string
@@ -40,7 +40,7 @@ type User struct {
 
 字段同样可以指定不同的名字
 
-```column
+```account.go
 type User struct {
     UserId int `name:"user_id" identity:"true"`
 }
@@ -51,7 +51,7 @@ type User struct {
 
 ### 在account.go中定义实体
 
-```user
+```account.go
 // 作于描述方法的参数使用。
 var (
     user User
@@ -71,7 +71,7 @@ func InsertUser() {
 
 ### DELETE 定义
 
-```delete
+```account.go
 // DeleteUser 删除一个user.UserId=userId并且user.Sex=0的用户
 func DeleteUser(userID string) {
     sqlcodegen.Delete(user)
@@ -84,7 +84,7 @@ func DeleteUser(userID string) {
 
 UPDATE 定义
 
-```update
+```account.go
 // UpdateUser 更新user.UserId=userId的用户的UserName和Sex
 func UpdateUser(userID string, userName string, sex byte) {
     sqlcodegen.From(user)
@@ -100,7 +100,7 @@ func UpdateUser(userID string, userName string, sex byte) {
 
 SELECT 定义
 
-```select
+```account.go
 // GetUser 获取user.UserID=userID的一条用户
 func GetUser(userID string) {
     sqlcodegen.From(user)
@@ -139,7 +139,7 @@ func GetSortedUserList() {
 
 ## 生成代码
 
-```cmd
+```c.sh
 gosql -in="account"
 ```
 
