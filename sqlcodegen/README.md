@@ -82,7 +82,7 @@ func DeleteUser(userID string) {
 // Where  删除条件
 ```
 
-UPDATE 定义
+### UPDATE 定义
 
 ```account.go
 // UpdateUser 更新user.UserId=userId的用户的UserName和Sex
@@ -98,7 +98,7 @@ func UpdateUser(userID string, userName string, sex byte) {
 // Where 更新条件
 ```
 
-SELECT 定义
+### SELECT 定义
 
 ```account.go
 // GetUser 获取user.UserID=userID的一条用户
