@@ -140,6 +140,8 @@ func GetSortedUserList() {
 
 ## 生成代码
 
+在命令行输入
+
 ```c.sh
 gosql -in="account"
 ```

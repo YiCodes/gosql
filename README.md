@@ -4,6 +4,8 @@ GoSQL 是以Go语言为数据库模型描述语言，生成强类型化的Go源�
 
 ## 安装
 
+使用go工具安装，GoSQL默认安装在$GOPATH
+
 ```cmd
 go get github.com/YiCodes/gosql/gosql
 go get github.com/YiCodes/gosql/sqlutil
@@ -70,6 +72,8 @@ func DeleteUser(userID string) {
 ```
 
 ### 生成代码
+
+在命令行输入
 
 ```cmd
 gosql -in="account"
