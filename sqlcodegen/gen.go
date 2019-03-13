@@ -1034,6 +1034,7 @@ func getTypeName(expr ast.Expr) string {
 }
 
 func addEntity(context *parseContext, genDecl *ast.GenDecl) error {
+Loop:
 	for _, spec := range genDecl.Specs {
 		varSpec, _ := spec.(*ast.ValueSpec)
 
@@ -1042,7 +1043,7 @@ func addEntity(context *parseContext, genDecl *ast.GenDecl) error {
 		for index := 0; index < len(context.tables); index++ {
 			if context.tables[index].name == tableType {
 				context.entity[varSpec.Names[0].Name] = context.tables[index]
-				return nil
+				continue Loop
 			}
 		}
 	}
